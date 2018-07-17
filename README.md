@@ -25,6 +25,23 @@ The deep learning side is not yet implemented - so no prediction of labels yet (
 the works). This will probably be TensorFlow-based.
 
 
+## Using it
+To use the tool, just
+
+ 1. Clone the repository:
+ ```bash
+ git clone https://github.com/fairlight1337/Iguana.git
+ ```
+
+ 2. Open `Iguana.pro` in Qt Creator
+
+ 3. Build and run it it via `Ctrl+R`
+
+ 4. Click the "Download" button and watch the wallpapers fly in.
+
+ 5. Optional: Right click the list on the right side to create tags. Use the left and right arrow keys to navigate your images.
+
+
 ## Hints
 I'm developing this on Windows. This makes a couple of details harder than necessary. One of these
 details includes using the C++ TensorFlow libraries (or building them first, for that matter). To
@@ -50,3 +67,6 @@ not yet supported. You can downgrade Anaconda's Python pretty easily - their FAQ
  * https://docs.anaconda.com/anaconda/faq#how-do-i-get-anaconda-with-python-3-5
 
 It takes a while to download/install, but its dead simple.
+
+The whole project would greatly benefit from code cleanup in terms of structure and encapsulation, but I'll leave
+that for when the actual functionality works.
