@@ -50,7 +50,15 @@ solve that issue, I followed this excellent guide:
  * https://joe-antognini.github.io/machine-learning/build-windows-tf
    This will include installing some more components, including Anaconda and CMake.
 
-And let myself be inspired by Joe's tutorial on the very same library afterwards:
+A minor note on this: My Anaconda didn't globally expose its Python include directory, so when calling CMake to
+build the VS files for building the TensorFlow C++ library, add this command line switch using your individual
+installation directory:
+
+```bash
+-DPYTHON_INCLUDE_DIR=[Anaconda installation directory]
+```
+   
+After that I let myself be inspired by Joe's tutorial on the very same library afterwards:
 
  * https://joe-antognini.github.io/machine-learning/windows-tf-project
 
@@ -66,7 +74,12 @@ not yet supported. You can downgrade Anaconda's Python pretty easily - their FAQ
 
  * https://docs.anaconda.com/anaconda/faq#how-do-i-get-anaconda-with-python-3-5
 
-It takes a while to download/install, but its dead simple.
+It takes a while to download/install, but its dead simple. Afterwards for me, numpy was missing. Installing it was
+straight forward:
+
+```bash
+conda install numpy
+```
 
 The whole project would greatly benefit from code cleanup in terms of structure and encapsulation, but I'll leave
 that for when the actual functionality works.
